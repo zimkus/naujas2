@@ -1,6 +1,11 @@
-let a, b, c;
-function findArea(a, b, c) {
-    let p = (a + b + c) / 2;
-    return Math.sqrt(p * (p - a) * (p - b) * (p - c))
+function exercise2(year) {
+    let count;
+    if ((year - 1896) % 4 === 0) {
+        count = (year - 1896) / 4;
+        return `Tai buvo olimpiniai metai ${count}`;
+    }
+    else {
+        return `Tai nebuvo olimpiniai metai`;
+    }
 
 }

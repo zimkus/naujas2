@@ -1,9 +1,12 @@
-let a = Number(process.argv[2]);
-let b = Number(process.argv[3]);
-let c = Number(process.argv[4]);
-let p = (a + b + c) / 2;
-
-function findArea(a, b, c) {
-    return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+let year = Number(process.argv[2]);
+function exercise2(year) {
+    let count;
+    if ((year - 1896) % 4 === 0) {
+        count = (year - 1896) / 4;
+        return `Tai buvo olimpiniai metai ${count}`;
+    }
+    else {
+        return `Tai nebuvo olimpiniai metai`;
+    }
 }
-console.log(findArea(a, b, c));
+console.log(exercise2(year));
